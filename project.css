@@ -1,0 +1,205 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('Brown White Minimalist Elegant Coffee Time Instagram Post.png');
+    background-size: cover;
+    background-position: center;
+    color: #c92222;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Säkerställer att sidan sträcker sig över hela viewportens höjd */
+}
+
+/* Navigation styles */
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10;
+    margin: 10;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Container styles */
+.container {
+    flex: 1; /* Tar upp resterande utrymme i flex-container */
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Tillåter produkter att flöda på flera rader */
+    justify-content: space-around; /* Centrera produkterna horisontellt */
+    align-items: center;
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0px;
+}
+.container1 img{
+    width: 500px; 
+    height: auto;
+    margin-bottom: 20
+}
+.container1 h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.container1 p{
+    font-size: large;
+}
+
+/* Produktstilar */
+.product {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px; /* Lite utrymme mellan produkter */
+    flex: 1 0 45%; /* Tar upp 45% av bredden och kan växa om det finns utrymme */
+    max-width: 45%; /* Maximal bredd för produkter */
+}
+
+.product img {
+    width: 100%;
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.product button:hover {
+    background-color: #45a049;
+}
+
+/* Form styl*/
+form {
+    margin-bottom: 20px;
+}
+form label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.contact-info {
+    background-color:rgba(0, 0, 0, 0.7) ;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    margin-top: 20px;
+}
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.section h4{
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.7);;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+ /* Placerar footern längst ned i flex-container */
+    width: 100%;
+    bottom: 0%;
+    position: sticky;
+}
+
+
+/* Responsiva mediaförfrågningar */
+@media screen and (max-width: 768px) {
+    .product, .container {
+        grid-template-columns: 1fr; /* En kolumn på mindre skärmar */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product, .container{
+        flex-direction: column;
+        padding: 5px;
+        /* Minska padding för mindre skärmar */
+    }
+    
+}
+
